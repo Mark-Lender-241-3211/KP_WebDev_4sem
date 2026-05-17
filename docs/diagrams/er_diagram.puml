@@ -1,0 +1,93 @@
+@startuml
+hide circle
+
+skinparam shadowing false
+skinparam linetype ortho
+skinparam entity {
+    BackgroundColor White
+    BorderColor Black
+}
+
+entity "User" as User {
+    * id : INTEGER <<PK>>
+    --
+    username : VARCHAR
+    password : VARCHAR
+    email : VARCHAR
+    role : VARCHAR
+}
+
+entity "Reader" as Reader {
+    * id : INTEGER <<PK>>
+    --
+    user_id : INTEGER <<FK>>
+    full_name : VARCHAR
+    phone : VARCHAR
+    registration_date : DATE
+}
+
+entity "Author" as Author {
+    * id : INTEGER <<PK>>
+    --
+    full_name : VARCHAR
+    description : TEXT
+}
+
+entity "Category" as Category {
+    * id : INTEGER <<PK>>
+    --
+    name : VARCHAR
+    description : TEXT
+}
+
+entity "Book" as Book {
+    * id : INTEGER <<PK>>
+    --
+    title : VARCHAR
+    author_id : INTEGER <<FK>>
+    publication_year : INTEGER
+    description : TEXT
+    total_copies : INTEGER
+    available_copies : INTEGER
+    cover : VARCHAR
+}
+
+entity "BookCategory" as BookCategory {
+    * id : INTEGER <<PK>>
+    --
+    book_id : INTEGER <<FK>>
+    category_id : INTEGER <<FK>>
+}
+
+entity "Loan" as Loan {
+    * id : INTEGER <<PK>>
+    --
+    book_id : INTEGER <<FK>>
+    reader_id : INTEGER <<FK>>
+    issue_date : DATE
+    due_date : DATE
+    return_date : DATE
+    status : VARCHAR
+}
+
+entity "UploadedFile" as UploadedFile {
+    * id : INTEGER <<PK>>
+    --
+    file : VARCHAR
+    file_type : VARCHAR
+    uploaded_at : DATETIME
+    uploaded_by_id : INTEGER <<FK>>
+}
+
+User ||--o| Reader : "имеет профиль"
+User ||--o{ UploadedFile : "загружает"
+
+Author ||--o{ Book : "пишет"
+
+Book ||--o{ BookCategory : "имеет категории"
+Category ||--o{ BookCategory : "используется в книгах"
+
+Reader ||--o{ Loan : "имеет выдачи"
+Book ||--o{ Loan : "выдается"
+
+@enduml

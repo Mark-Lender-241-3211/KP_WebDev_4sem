@@ -1,0 +1,66 @@
+@startuml
+left to right direction
+
+skinparam shadowing false
+skinparam packageStyle rectangle
+skinparam usecase {
+    BackgroundColor White
+    BorderColor Black
+}
+skinparam actor {
+    BackgroundColor White
+    BorderColor Black
+}
+
+actor "Читатель" as Reader
+actor "Библиотекарь" as Librarian
+actor "Администратор" as Admin
+
+rectangle "Веб-приложение для учета книг и читателей библиотеки" {
+    usecase "Войти в систему" as UC_Login
+
+    usecase "Просмотреть каталог книг" as UC_ViewCatalog
+    usecase "Искать и фильтровать книги" as UC_Search
+    usecase "Просмотреть карточку книги" as UC_BookCard
+    usecase "Просмотреть свои выдачи" as UC_OwnLoans
+
+    usecase "Управлять книгами" as UC_ManageBooks
+    usecase "Управлять читателями" as UC_ManageReaders
+    usecase "Оформить выдачу книги" as UC_IssueBook
+    usecase "Оформить возврат книги" as UC_ReturnBook
+    usecase "Просмотреть журнал выдач" as UC_LoansJournal
+    usecase "Просмотреть статистику" as UC_Stats
+    usecase "Загрузить файл" as UC_Upload
+    usecase "Выгрузить данные" as UC_Export
+
+    usecase "Управлять пользователями" as UC_ManageUsers
+    usecase "Назначить роли и права" as UC_Roles
+}
+
+Reader --> UC_Login
+Reader --> UC_ViewCatalog
+Reader --> UC_Search
+Reader --> UC_BookCard
+Reader --> UC_OwnLoans
+
+Librarian --> UC_Login
+Librarian --> UC_ViewCatalog
+Librarian --> UC_Search
+Librarian --> UC_BookCard
+Librarian --> UC_ManageBooks
+Librarian --> UC_ManageReaders
+Librarian --> UC_IssueBook
+Librarian --> UC_ReturnBook
+Librarian --> UC_LoansJournal
+Librarian --> UC_Stats
+Librarian --> UC_Upload
+Librarian --> UC_Export
+
+Admin --> UC_Login
+Admin --> UC_ManageUsers
+
+UC_Search ..> UC_ViewCatalog : <<extend>>
+UC_BookCard ..> UC_ViewCatalog : <<extend>>
+UC_ManageUsers ..> UC_Roles : <<include>>
+
+@enduml

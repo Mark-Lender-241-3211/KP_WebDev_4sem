@@ -1,5 +1,6 @@
 \documentclass[14pt, a4paper]{extarticle}
 \usepackage{mospolytech_coursework}
+\usepackage{float}
 
 % Определение данных
 \newcommand{\theme}{%
@@ -9,6 +10,12 @@
 \newcommand{\student}{Лендер Марк Сергеевич}
 \newcommand{\group}{241-3211}
 \newcommand{\teacher}{Кружалов Алексей Сергеевич}
+
+% Единый стиль таблиц
+\newcommand{\coursetablesetup}{%
+    \small
+
+}
 
 \begin{document}
 
@@ -34,6 +41,7 @@
 
 % Список литературы
 \bibliographystyle{ugost2003} % ГОСТ 7.1-2003
+\nocite{gost_report}
 \bibliography{refs}
 
 % Приложения (при необходимости)

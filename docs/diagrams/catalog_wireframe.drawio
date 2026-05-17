@@ -1,0 +1,181 @@
+<mxfile host="app.diagrams.net" modified="2026-05-17T12:00:00.000Z" agent="ChatGPT" version="24.7.17" compressed="false">
+  <diagram id="catalog-page-compact" name="Page-1">
+    <mxGraphModel dx="1200" dy="820" grid="1" gridSize="10" guides="1" tooltips="1" connect="0" arrows="0" fold="1" page="1" pageScale="1" pageWidth="1169" pageHeight="827" math="0" shadow="0">
+      <root>
+        <mxCell id="0"/>
+        <mxCell id="1" parent="0"/>
+        <mxCell id="2" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="40" y="40" width="1080" height="690" as="geometry"/>
+        </mxCell>
+        <mxCell id="3" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="60" y="60" width="1040" height="50" as="geometry"/>
+        </mxCell>
+        <mxCell id="4" value="Библиотека" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=16;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="73" width="130" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="5" value="Каталог | Книги | Читатели | Журнал выдач | Статистика | Выход" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="420" y="73" width="650" height="24" as="geometry"/>
+        </mxCell>
+        <mxCell id="6" value="Каталог книг" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=24;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="80" y="135" width="260" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="7" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fafafa;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="185" width="1000" height="95" as="geometry"/>
+        </mxCell>
+        <mxCell id="8" value="Поиск и фильтрация" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=15;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="198" width="260" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="9" value="Поиск по названию" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;spacingLeft=8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="95" y="228" width="290" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="10" value="Автор" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;spacingLeft=8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="405" y="228" width="160" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="11" value="Категория" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;spacingLeft=8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="585" y="228" width="180" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="12" value="Доступность" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;align=left;spacingLeft=8;fontSize=13;" vertex="1" parent="1">
+          <mxGeometry x="785" y="228" width="160" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="13" value="Найти" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="965" y="228" width="90" height="30" as="geometry"/>
+        </mxCell>
+        <mxCell id="14" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="315" width="1000" height="286" as="geometry"/>
+        </mxCell>
+        <mxCell id="15" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f0f0f0;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="315" width="1000" height="40" as="geometry"/>
+        </mxCell>
+        <mxCell id="16" value="Название ↕" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="95" y="325" width="250" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="17" value="Автор ↕" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="348" y="325" width="150" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="18" value="Категория ↕" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="500" y="325" width="220" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="19" value="Издания" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="723" y="325" width="80" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="20" value="Доступно ↕" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="805" y="325" width="95" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="21" value="Действия" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;fontStyle=1;" vertex="1" parent="1">
+          <mxGeometry x="902" y="325" width="145" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="22" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="355" width="1000" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="23" value="▾ ПСС В. И. Ленина" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="367" width="250" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="24" value="В. И. Ленин" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="348" y="367" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="25" value="Политэкономия, марксизм-ленинизм, ..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="367" width="220" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="26" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="723" y="367" width="80" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="27" value="5 из 7" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="367" width="95" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="28" value="Свернуть" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="363" width="92" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="29" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="400" width="1000" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="30" value="5-е изд., Политиздат, 1958–1965" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="412" width="250" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="31" value="" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="348" y="412" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="32" value="Тома 1–55" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="412" width="220" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="33" value="" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="723" y="412" width="80" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="34" value="3 из 4" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="412" width="95" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="35" value="Подробнее" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="408" width="92" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="36" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="445" width="1000" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="37" value="4-е изд., Госполитиздат, 1941–1967" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="457" width="250" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="38" value="" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="348" y="457" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="39" value="Тома 1–45" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="457" width="220" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="40" value="" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="723" y="457" width="80" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="41" value="2 из 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="457" width="95" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="42" value="Подробнее" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="453" width="92" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="43" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="490" width="1000" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="44" value="▸ Капитал" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="502" width="250" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="45" value="К. Маркс" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="348" y="502" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="46" value="Политэкономия, марксизм, ..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="502" width="220" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="47" value="3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="723" y="502" width="80" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="48" value="4 из 6" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="502" width="95" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="49" value="Развернуть" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="498" width="92" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="50" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#ffffff;strokeColor=#000000;" vertex="1" parent="1">
+          <mxGeometry x="80" y="535" width="1000" height="45" as="geometry"/>
+        </mxCell>
+        <mxCell id="51" value="▸ Манифест Коммунистической партии" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="95" y="547" width="250" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="52" value="К. Маркс, Ф. Энгельс" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="348" y="547" width="150" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="53" value="Политическая теория, история, ..." style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="500" y="547" width="220" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="54" value="2" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="723" y="547" width="80" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="55" value="2 из 3" style="text;html=1;strokeColor=none;fillColor=none;align=center;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="805" y="547" width="95" height="18" as="geometry"/>
+        </mxCell>
+        <mxCell id="56" value="Развернуть" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e6e6e6;strokeColor=#000000;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="930" y="543" width="92" height="28" as="geometry"/>
+        </mxCell>
+        <mxCell id="57" value="Страница 1 из 5" style="text;html=1;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;fontSize=12;" vertex="1" parent="1">
+          <mxGeometry x="80" y="625" width="150" height="20" as="geometry"/>
+        </mxCell>
+        <mxCell id="58" value="В начало | &lt; Пред. | 1 | 2 | 3 | След. &gt; | В конец" style="text;html=1;strokeColor=none;fillColor=none;align=right;verticalAlign=middle;fontSize=14;" vertex="1" parent="1">
+          <mxGeometry x="650" y="625" width="430" height="20" as="geometry"/>
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
