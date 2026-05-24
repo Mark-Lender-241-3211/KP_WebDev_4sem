@@ -1,0 +1,36 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Главная{% endblock %}
+
+{% block content %}
+<section class="bg-white border rounded p-5">
+    <div class="row align-items-center">
+        <div class="col-lg-8">
+            <h1 class="display-6 fw-semibold mb-4">
+                Веб-приложение для учета книг и читателей библиотеки
+            </h1>
+
+            <p class="lead mb-4">
+                Система предназначена для ведения каталога книг, учета читателей,
+                оформления выдачи и возврата книг, а также просмотра статистики.
+            </p>
+
+            <div class="d-flex gap-3">
+                <a href="{% url 'library:catalog' %}" class="btn btn-dark">
+                    Перейти в каталог
+                </a>
+
+                {% if is_librarian_user %}
+                    <a href="{% url 'library:loans' %}" class="btn btn-outline-dark">
+                        Журнал выдач
+                    </a>
+                {% elif not user.is_authenticated %}
+                    <a href="{% url 'library:login' %}" class="btn btn-outline-dark">
+                        Войти в систему
+                    </a>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+</section>
+{% endblock %}

@@ -14,7 +14,7 @@ entity "User" as User {
     username : VARCHAR
     password : VARCHAR
     email : VARCHAR
-    role : VARCHAR
+    roles : VARCHAR
 }
 
 entity "Reader" as Reader {
@@ -44,12 +44,18 @@ entity "Book" as Book {
     * id : INTEGER <<PK>>
     --
     title : VARCHAR
-    author_id : INTEGER <<FK>>
     publication_year : INTEGER
     description : TEXT
     total_copies : INTEGER
     available_copies : INTEGER
     cover : VARCHAR
+}
+
+entity "BookAuthor" as BookAuthor {
+    * id : INTEGER <<PK>>
+    --
+    book_id : INTEGER <<FK>>
+    author_id : INTEGER <<FK>>
 }
 
 entity "BookCategory" as BookCategory {
@@ -70,19 +76,10 @@ entity "Loan" as Loan {
     status : VARCHAR
 }
 
-entity "UploadedFile" as UploadedFile {
-    * id : INTEGER <<PK>>
-    --
-    file : VARCHAR
-    file_type : VARCHAR
-    uploaded_at : DATETIME
-    uploaded_by_id : INTEGER <<FK>>
-}
-
 User ||--o| Reader : "имеет профиль"
-User ||--o{ UploadedFile : "загружает"
 
-Author ||--o{ Book : "пишет"
+Author ||--o{ BookAuthor : "указывает авторство"
+Book ||--o{ BookAuthor : "имеет авторов"
 
 Book ||--o{ BookCategory : "имеет категории"
 Category ||--o{ BookCategory : "используется в книгах"

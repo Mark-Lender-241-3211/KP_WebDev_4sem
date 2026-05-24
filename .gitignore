@@ -1,25 +1,47 @@
+# Python
 __pycache__/
 *.py[cod]
 *.pyo
 *.pyd
 .Python
-.env
-.venv
+
+# Virtual environments
+.venv/
 venv/
 env/
-pip-log.txt
-pip-delete-this-directory.txt
+ENV/
 
-# Django
+# Environment variables
+.env
+.env.*
+*.env
+
+# Django / local database
+app/db.sqlite3
+app/db.sqlite3-journal
+*.sqlite3
+*.sqlite3-journal
+app/library_project/local_settings.py
+
+# Static build output
+app/staticfiles/
+
+# User uploaded media
+app/media/*
+!app/media/.gitkeep
+!app/media/covers/
+app/media/covers/*
+!app/media/covers/.gitkeep
+
+# Logs
 *.log
-local_settings.py
-db.sqlite3
-db.sqlite3-journal
-media/
-staticfiles/
 
 # VS Code
-.vscode/
+.vscode/*
+!.vscode/tasks.json
+
+# PyCharm
+.idea/
 
 # OS files
 .DS_Store
@@ -36,15 +58,18 @@ Thumbs.db
 *.ilg
 *.ind
 *.lof
-*.log
 *.lot
 *.out
 *.run.xml
 *.synctex.gz
 *.toc
 *.xdv
+*.nav
+*.snm
+*.vrb
 
 # Temporary files
 *.tmp
 *.bak
 *.swp
+*.swo

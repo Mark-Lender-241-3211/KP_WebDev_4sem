@@ -1,0 +1,34 @@
+{% extends 'library/base.html' %}
+
+{% block title %}Удаление книги{% endblock %}
+
+{% block content %}
+<div class="row justify-content-center">
+    <div class="col-md-7">
+        <section class="bg-white border rounded p-4">
+            <h1 class="h3 mb-3">Удаление книги</h1>
+
+            <p>
+                Вы действительно хотите удалить книгу
+                <strong>{{ book.title }}</strong>?
+            </p>
+
+            <p class="text-muted">
+                Удаление невозможно, если по книге уже существуют записи о выдачах.
+            </p>
+
+            <form method="post" class="d-flex gap-2">
+                {% csrf_token %}
+
+                <button type="submit" class="btn btn-danger">
+                    Удалить
+                </button>
+
+                <a href="{% url 'library:book_detail' book.id %}" class="btn btn-outline-secondary">
+                    Отмена
+                </a>
+            </form>
+        </section>
+    </div>
+</div>
+{% endblock %}

@@ -1,0 +1,104 @@
+{% extends 'library/base.html' %}
+
+{% block title %}{{ page_title }}{% endblock %}
+
+{% block content %}
+<div class="mb-4">
+    {% if book %}
+        <a href="{% url 'library:book_detail' book.id %}" class="btn btn-outline-secondary">
+            Назад к карточке книги
+        </a>
+    {% else %}
+        <a href="{% url 'library:catalog' %}" class="btn btn-outline-secondary">
+            Назад к каталогу
+        </a>
+    {% endif %}
+</div>
+
+<div class="row justify-content-center">
+    <div class="col-md-8">
+        <section class="bg-white border rounded p-4">
+            <h1 class="h3 mb-4">{{ page_title }}</h1>
+
+            <form method="post" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                {% if form.non_field_errors %}
+                    <div class="alert alert-danger">
+                        {{ form.non_field_errors }}
+                    </div>
+                {% endif %}
+
+                <div class="mb-3">
+                    <label class="form-label">Название</label>
+                    {{ form.title }}
+                    {{ form.title.errors }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Авторы</label>
+                    {{ form.authors }}
+                    {{ form.authors.errors }}
+                    <div class="form-text">
+                        Можно выбрать одного или нескольких авторов.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Категории</label>
+                    {{ form.categories }}
+                    {{ form.categories.errors }}
+                    <div class="form-text">
+                        Можно выбрать одну или несколько категорий.
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Год издания</label>
+                    {{ form.publication_year }}
+                    {{ form.publication_year.errors }}
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Состав томов</label>
+                    {{ form.volume_composition }}
+                    {{ form.volume_composition.errors }}
+                    <div class="form-text">
+                        Например: «Тома 1–55», «Т. 1», «Тома 1–45».
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Всего экземпляров</label>
+                        {{ form.total_copies }}
+                        {{ form.total_copies.errors }}
+                    </div>
+
+                    <div class="col-md-6 mb-3">
+                        <label class="form-label">Доступно экземпляров</label>
+                        {{ form.available_copies }}
+                        {{ form.available_copies.errors }}
+                    </div>
+                </div>
+
+                <div class="mb-3">
+                    <label class="form-label">Описание</label>
+                    {{ form.description }}
+                    {{ form.description.errors }}
+                </div>
+
+                <div class="mb-4">
+                    <label class="form-label">Обложка</label>
+                    {{ form.cover }}
+                    {{ form.cover.errors }}
+                </div>
+
+                <button type="submit" class="btn btn-dark">
+                    {{ submit_text }}
+                </button>
+            </form>
+        </section>
+    </div>
+</div>
+{% endblock %}

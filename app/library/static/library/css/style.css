@@ -1,0 +1,71 @@
+.edition-toggle {
+    min-width: 22px;
+    line-height: 1.2;
+}
+
+.book-title-link,
+.book-title-link:visited {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+.book-title-link:hover {
+    color: inherit !important;
+    text-decoration: underline !important;
+}
+
+.book-cover-thumb {
+    display: block;
+    width: 42px;
+    height: 58px;
+    object-fit: cover;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    margin: 0 auto;
+}
+
+.book-cover-placeholder {
+    width: 42px;
+    height: 58px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    background-color: #f8f9fa;
+    color: #6c757d;
+    font-size: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+.monthly-chart {
+    min-height: 220px;
+    display: flex;
+    align-items: flex-end;
+    gap: 16px;
+    border: 1px solid #dee2e6;
+    border-radius: 4px;
+    padding: 16px;
+    overflow-x: auto;
+}
+
+.monthly-chart-item {
+    min-width: 62px;
+    text-align: center;
+}
+
+.monthly-chart-bar-wrap {
+    height: 140px;
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+}
+
+.monthly-chart-bar {
+    width: 32px;
+    min-height: 4px;
+    background-color: #dee2e6;
+    border: 1px solid #adb5bd;
+    border-radius: 4px 4px 0 0;
+}
