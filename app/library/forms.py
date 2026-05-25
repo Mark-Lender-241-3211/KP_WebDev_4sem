@@ -226,6 +226,34 @@ class BookForm(forms.ModelForm):
 
         return book
 
+class AuthorForm(forms.ModelForm):
+    class Meta:
+        model = Author
+        fields = ('full_name', 'description')
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 4}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields.values():
+            field.widget.attrs.update({'class': 'form-control'})
+
+
+class CategoryForm(forms.ModelForm):
+    class Meta:
+        model = Category
+        fields = ('name', 'description')
+        widgets = {
+            'description': forms.Textarea(attrs={'rows': 4}),
+        }
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+
+        for field in self.fields.values():
+            field.widget.attrs.update({'class': 'form-control'})
 
 class ReaderForm(forms.ModelForm):
     email = forms.EmailField(

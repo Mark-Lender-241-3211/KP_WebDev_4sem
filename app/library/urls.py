@@ -12,6 +12,14 @@ urlpatterns = [
     path('catalog/', views.catalog, name='catalog'),
     path('catalog/export/', views.export_books_csv, name='export_books_csv'),
 
+    path('authors/', views.authors, name='authors'),
+    path('authors/create/', views.create_author, name='create_author'),
+    path('authors/<int:pk>/edit/', views.update_author, name='update_author'),
+
+    path('categories/', views.categories_list, name='categories'),
+    path('categories/create/', views.create_category, name='create_category'),
+    path('categories/<int:pk>/edit/', views.update_category, name='update_category'),
+
     path('books/create/', views.create_book, name='create_book'),
     path('books/<int:pk>/', views.book_detail, name='book_detail'),
     path('books/<int:pk>/edit/', views.update_book, name='update_book'),

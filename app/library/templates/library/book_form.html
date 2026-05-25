@@ -39,9 +39,11 @@
                     <label class="form-label">Авторы</label>
                     {{ form.authors }}
                     {{ form.authors.errors }}
-                    <div class="form-text">
-                        Можно выбрать одного или нескольких авторов.
-                    </div>
+                <div class="form-text">
+                    Можно выбрать одного или нескольких авторов.
+                    Если нужного автора нет в списке,
+                    <a href="{% url 'library:create_author' %}">добавьте его</a>.
+                </div>
                 </div>
 
                 <div class="mb-3">
@@ -50,6 +52,8 @@
                     {{ form.categories.errors }}
                     <div class="form-text">
                         Можно выбрать одну или несколько категорий.
+                        Если нужной категории нет в списке,
+                        <a href="{% url 'library:create_category' %}">добавьте ее</a>. 
                     </div>
                 </div>
 

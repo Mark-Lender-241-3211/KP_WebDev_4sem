@@ -34,8 +34,17 @@
 
                     {% if is_librarian_user %}
                         <li class="nav-item">
+                            <a class="nav-link" href="{% url 'library:authors' %}">Авторы</a>
+                        </li>
+
+                        <li class="nav-item">
+                            <a class="nav-link" href="{% url 'library:categories' %}">Категории</a>
+                        </li>
+
+                        <li class="nav-item">
                             <a class="nav-link" href="{% url 'library:readers' %}">Читатели</a>
                         </li>
+
                         <li class="nav-item">
                             <a class="nav-link" href="{% url 'library:loans' %}">Журнал выдач</a>
                         </li>

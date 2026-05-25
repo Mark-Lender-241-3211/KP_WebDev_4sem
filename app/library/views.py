@@ -15,9 +15,15 @@ from django.shortcuts import get_object_or_404, redirect, render
 from django.utils import timezone
 from django.utils.dateparse import parse_date
 
-from .forms import BookForm, LoanForm, ReaderForm, ReaderRegistrationForm
-from .models import Book, Category, Loan, Reader
-
+from .forms import (
+    AuthorForm,
+    BookForm,
+    CategoryForm,
+    LoanForm,
+    ReaderForm,
+    ReaderRegistrationForm,
+)
+from .models import Author, Book, Category, Loan, Reader
 
 def user_is_librarian(user):
     return (
@@ -390,6 +396,141 @@ def loans(request):
 
     return render(request, 'library/loans.html', context)
 
+
+@login_required
+def authors(request):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    query = request.GET.get('q', '').strip()
+
+    authors_list = Author.objects.order_by('full_name')
+
+    if query:
+        authors_list = authors_list.filter(
+            Q(full_name__icontains=query)
+            | Q(description__icontains=query)
+        )
+
+    return render(request, 'library/authors.html', {
+        'authors': authors_list,
+        'query': query,
+    })
+
+
+@login_required
+def create_author(request):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    if request.method == 'POST':
+        form = AuthorForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Автор добавлен.')
+            return redirect('library:authors')
+    else:
+        form = AuthorForm()
+
+    return render(request, 'library/author_form.html', {
+        'form': form,
+        'page_title': 'Добавление автора',
+        'submit_text': 'Добавить автора',
+    })
+
+
+@login_required
+def update_author(request, pk):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    author = get_object_or_404(Author, pk=pk)
+
+    if request.method == 'POST':
+        form = AuthorForm(request.POST, instance=author)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Автор обновлен.')
+            return redirect('library:authors')
+    else:
+        form = AuthorForm(instance=author)
+
+    return render(request, 'library/author_form.html', {
+        'form': form,
+        'author': author,
+        'page_title': 'Редактирование автора',
+        'submit_text': 'Сохранить изменения',
+    })
+
+
+@login_required
+def categories_list(request):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    query = request.GET.get('q', '').strip()
+
+    categories = Category.objects.order_by('name')
+
+    if query:
+        categories = categories.filter(
+            Q(name__icontains=query)
+            | Q(description__icontains=query)
+        )
+
+    return render(request, 'library/categories.html', {
+        'categories': categories,
+        'query': query,
+    })
+
+
+@login_required
+def create_category(request):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    if request.method == 'POST':
+        form = CategoryForm(request.POST)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Категория добавлена.')
+            return redirect('library:categories')
+    else:
+        form = CategoryForm()
+
+    return render(request, 'library/category_form.html', {
+        'form': form,
+        'page_title': 'Добавление категории',
+        'submit_text': 'Добавить категорию',
+    })
+
+
+@login_required
+def update_category(request, pk):
+    if not user_is_librarian(request.user):
+        return redirect('library:catalog')
+
+    category = get_object_or_404(Category, pk=pk)
+
+    if request.method == 'POST':
+        form = CategoryForm(request.POST, instance=category)
+
+        if form.is_valid():
+            form.save()
+            messages.success(request, 'Категория обновлена.')
+            return redirect('library:categories')
+    else:
+        form = CategoryForm(instance=category)
+
+    return render(request, 'library/category_form.html', {
+        'form': form,
+        'category': category,
+        'page_title': 'Редактирование категории',
+        'submit_text': 'Сохранить изменения',
+    })
 
 @login_required
 def readers(request):
