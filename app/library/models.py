@@ -54,7 +54,7 @@ class Reader(models.Model):
 
 
 class Author(models.Model):
-    full_name = models.CharField('ФИО автора или название коллектива', max_length=255)
+    full_name = models.CharField('ФИО автора', max_length=255)
     description = models.TextField('Описание', blank=True)
 
     class Meta:
