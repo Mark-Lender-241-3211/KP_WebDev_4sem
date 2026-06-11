@@ -1,7 +1,3 @@
-cd app
-.\.venv\Scripts\Activate.ps1
-python manage.py runserver
-
 # Веб-приложение для учета книг и читателей библиотеки
 
 Курсовой проект по дисциплине «Разработка веб-приложений».
@@ -133,3 +129,8 @@ SQLite используется как простая локальная баз�
 │   └── refs.bib
 ├── .gitignore
 └── README.md
+
+## Деплой приложения
+
+Проект развернут на хостинге PythonAnywhere и доступен по публичному адресу:
+https://comrademark.pythonanywhere.com
